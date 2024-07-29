@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Spinner
+        android:id="@+id/mapTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ToggleButton
+        android:id="@+id/toggleZoomControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapTypeSpinner"
+        android:layout_centerHorizontal="true"
+        android:textOn="Hide Zoom Controls"
+        android:textOff="Show Zoom Controls"/>
+
+    <Button
+        android:id="@+id/btnCenterBogota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toggleZoomControls"
+        android:layout_centerHorizontal="true"
+        android:text="Center on Bogota"/>
+
+    <Button
+        android:id="@+id/btnAnimateEgypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCenterBogota"
+        android:layout_centerHorizontal="true"
+        android:text="Animate to Egypt"/>
+
+    <Button
+        android:id="@+id/btnShowCameraPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAnimateEgypt"
+        android:layout_centerHorizontal="true"
+        android:text="Show Camera Position"/>
+
+    <Button
+        android:id="@+id/btnAddMarkerParis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnShowCameraPosition"
+        android:layout_centerHorizontal="true"
+        android:text="Add Marker on Paris"/>
+
+    <RadioGroup
+        android:id="@+id/styleRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddMarkerParis"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioStyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Style 1"/>
+
+        <RadioButton
+            android:id="@+id/radioStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Style 2"/>
+    </RadioGroup>
+
+</RelativeLayout>
